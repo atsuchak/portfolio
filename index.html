@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Photos/image.ico">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/dbecc4d286.js" crossorigin="anonymous"></script>
+    <title>Ahnaf Tajwar Suchak</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #FFF9F2;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <header>
+        <div class="header-content">
+            <span class="name">Ahnaf Tajwar Suchak</span>
+            <div class="menu">
+                <span class="menu-item">resume</span>
+                <span class="menu-item">project</span>
+                <span class="menu-item"><a href="contact.html">contact</a></span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <style>
+            .header-content {
+                background-color: #fafafa;
+                padding: 1% 5%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                font-size: 1rem;
+                position: relative;
+            }
+            .menu {
+                display: flex;
+                gap: 15px;
+            }
+
+            .menu-icon {
+                display: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+
+            @media (max-width: 768px) {
+                .menu {
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    right: 5%;
+                    background-color: #fff;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    border-radius: 5px;
+                    flex-direction: column;
+                    width: 150px;
+                    text-align: center;
+                }
+
+                .menu.active {
+                    display: flex;
+                }
+
+                .menu-item {
+                    padding: 10px;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                .menu-icon {
+                    display: block;
+                }
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuIcon = document.querySelector(".menu-icon");
+                const menu = document.querySelector(".menu");
+            
+                menuIcon.addEventListener("click", function () {
+                    menu.classList.toggle("active");
+                });
+            });
+        </script>
+
+    </header>
+
+    <img style="margin: 20px auto; display: block; max-width:200px; width: 100%; height:auto;" src="Photos/image.png" alt="">
+    <p id="p1" style="font-size: 30px; margin-top: 5px;">Hi, I'm Suchak!
+    <i class="fa-solid fa-hand"></i>
+    </p>
+    <style>
+        .fa-hand {
+            font-size: 3rem;
+            color: orange;
+        }
+        #p1 {
+            text-align: center;
+            font-size: 2vw;
+            margin-bottom: 5px;
+        }
+    </style>
+    
+    <div style="text-align: center;">
+        <span class="cse">Student of CSE</span>
+    </div>
+    <style>
+        .cse {
+            display: inline-block;
+            justify-content: center;
+            padding: 8px 15px;
+            margin: 10px auto;
+            max-width: 250px;
+            align-items: center; 
+            font-size: 1.5rem;
+            background-color: #F0F0F0;
+            border-radius: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        A Computer Science student at United International University with a
+passion for software engineering. Currently pursuing my BSc, I’m
+particularly interested in machine learning and data science. I’ve
+worked on various projects, including a line-following robot, and
+participated in both intra-university and national robotics competitions.
+I also compete in programming contests to continuously improve my
+skills. I’m eager to expand my knowledge and pursue a career in
+software development.
+    </p>
+
+    <div class="mail-container">
+        <span class="mail">
+            <a href="mailto:ahnaftajwarsuchak@gmail.com">
+                <i class="fa-sharp fa-solid fa-envelope" style="padding-right: 1%;">
+
+                </i> Ahnaf Tajwar Suchak
+            </a>
+        </span>
+    </div>
+    <style>
+        .mail-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .mail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 5%;
+        max-width: 300px; 
+        font-size: 1.2rem; 
+        background-color: #F0F0F0;
+        border-radius: 80px;
+        white-space: nowrap;
+        }
+
+        .mail a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+    <br><br><br>
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        I have a strong drive for continuous learning and exploring emerging technologies.
+    </p><br>
+    
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        <a href="https://github.com/atsuchak" target="_blank">
+            <i class="fa-brands fa-github github-icon"></i>
+        </a>
+        <a href="https://linkedin.com/in/atsuchak" target="_blank">
+            <i class="fa-brands fa-linkedin linkedin-icon"></i>
+        </a>
+        <a href="https://facebook.com/atsuchak" target="_blank">
+            <i class="fa-brands fa-facebook facebook-icon"></i>
+        </a>
+        <a href="https://x.com/atsuchak" target="_blank">
+            <i class="fa-brands fa-x-twitter twitter-icon"></i>
+        </a>
+        
+        <style>
+            a {
+                text-decoration: none;
+            }
+
+            .github-icon,
+            .linkedin-icon,
+            .facebook-icon,
+            .twitter-icon {
+                font-size: 10vw;
+                color: black;
+                margin: 0 15px;
+            }
+            
+        </style>
+    </p><br><br><br><br>
+
+    <h1 style="text-align: center; margin: auto; max-width: 90%; line-height: 1.5;">
+        Programming Languages
+    </h1>
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        I have a strong command of the following programming languages and a
+constant curiosity to explore new ones:
+<i class="fa-solid fa-rocket"></i>
+        <style>
+            .fa-rocket {
+                color: darkorange;
+            }
+        </style>
+    </p><br>
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        <div class="icon-container">
+            <div class="icon-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+            </div>
+    
+            <div class="icon-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+    
+            <div class="icon-item">
+                <i class="fa-solid fa-code"></i>
+                <span>C</span>
+            </div>
+    
+            <div class="icon-item">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+            </div>
+    
+            <div class="icon-item">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+        </div>
+    </p>
+    <br><br>
+    <style>
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    
+        .icon-item {
+            text-align: center;
+            margin: 20px;
+        }
+    
+        .icon-item i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    
+        .icon-item span {
+            display: block;
+            font-size: 16px;
+            color: black;
+        }
+    
+        .fa-html5 {
+            color: orangered;
+        }
+        .fa-css3-alt {
+            color: rgb(73, 73, 246);
+        }
+        .fa-code {
+            color: black;
+        }
+        .fa-java {
+            color: skyblue;
+        }
+        .fa-js {
+            color: purple;
+        }
+    </style>
+    
+    <h1 style="text-align: center; margin: auto; max-width: 90%; line-height: 1.5; font-size: 3rem;">
+        Get in touch
+    </h1>    
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+        Feel free to reach out if you’d like to connect, collaborate, or
+discuss exciting opportunities!
+    </p>
+
+    <div class="contact-container">
+        <!-- WhatsApp -->
+        <div class="whatsapp-contain">
+            <a href="https://wa.me/+8801301085365" class="whatsi">
+                <i class="fa-sharp fa-solid fa-envelope" style="padding-right: 8px;"></i>
+                +8801301085365
+            </a>
+        </div>
+    
+        <!-- Email -->
+        <div class="mail-contain">
+            <a href="mailto:ahnaftajwarsuchak@gmail.com" class="maili">
+                <i class="fa-sharp fa-solid fa-envelope" style="padding-right: 8px;"></i>
+                ahnaftajwarsuchak@gmail.com
+            </a>
+        </div>
+    </div>
+    
+    <style>
+        .contact-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 50px; 
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+    
+        .whatsi, .maili {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    
+        .whatsi i, .maili i {
+            padding-right: 8px; 
+        }
+    </style>
+
+<br>
+
+<p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+    <a href="https://github.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-github github-icon"></i>
+    </a>
+    <a href="https://linkedin.com/in/atsuchak" target="_blank">
+        <i class="fa-brands fa-linkedin linkedin-icon"></i>
+    </a>
+    <a href="https://facebook.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-facebook facebook-icon"></i>
+    </a>
+    <a href="https://x.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-x-twitter twitter-icon"></i>
+    </a>
+    
+    
+    <br><br>
+    <p style="text-align: center; margin: auto; max-width: 90%; font-weight: bold; font-size: 1.5rem; line-height: 1.5;">
+        Legal
+    </p>
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-weight: bold; font-size: 0.8rem; line-height: 1.5;">
+        <a href="terms.html" style="color: black;">Terms and Conditions</a>
+    </p>
+
+    <p style="text-align: center; margin: auto; max-width: 90%; font-weight: bold; font-size: 0.8rem; line-height: 1.5;">
+        <a href="policy.html" style="color: black;">Privacy and Policy</a>
+    </p><br><br>
+    
+    <p style="justify-content: end; text-align: end; font-size: 0.9rem;"><b>UI</b> inspired by <b>Azraf Al Monzim</b></p>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="name">© 2025 Ahnaf Tajwar Suchak. All rights reserved</span>
+        </div>
+        <style>
+            .footer{
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                height: 30px;
+                border-top: 1px solid black;
+                margin-top: 20px;
+                background-color: #fafafa;
+                font-size: 1rem;
+                padding: 1% 5%;
+            }
+            .footer-content {
+                font-size: 0.8rem;
+                stroke-width: bold;
+                text-align: center;
+                color: black;
+            }
+        </style>
+    </footer>
+
+</body>
+</html>
