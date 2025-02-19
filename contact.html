@@ -20,9 +20,9 @@
     <header>
         <div class="header-content">
             <div class="menu">
-                <span class="menu-item">resume</span>
-                <span class="menu-item">project</span>
-                <span class="menu-item">contact</span>
+                <span class="menu-item"><a href="resume.html" style="color: black;">resume</a></span>
+                <span class="menu-item"><a href="contact.html" style="color: black;">project</a></span>
+                <span class="menu-item"><a href="contact.html" style="color: black;">contact</a></span>
             </div>
             <div class="menu-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -168,7 +168,7 @@ discuss exciting opportunities!
         .linkedin-icon,
         .facebook-icon,
         .twitter-icon {
-            font-size: 8vw;
+            font-size: 4rem;
             color: black;
             margin: 0 15px;
         }
@@ -178,7 +178,7 @@ discuss exciting opportunities!
         }
     </style>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLScJK08S-fYkzdcJnqR9CLUxBmdMut6NP5E1bwhTuNqAQrVOpg/viewform" method="POST" target="_blank" class="contact-form">
+<form id="contact-form" class="contact-form">
     <div class="form-row">
         <div class="form-group">
             <label for="name">Name:</label>
@@ -197,9 +197,68 @@ discuss exciting opportunities!
     </div>
 
     <button type="submit">Submit</button>
+    <!-- <p id="form-message" style="text-align: center; color: green; display: none;">Your message has been sent!</p> -->
 </form>
 
+<div id="popup-message">
+    <p>Your message has been submitted!</p>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        const formData = new FormData(this);
+        
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLScJK08S-fYkzdcJnqR9CLUxBmdMut6NP5E1bwhTuNqAQrVOpg/formResponse", {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"  
+        }).then(() => {
+            // alert("Your nessage has been submitted!");
+            document.getElementById("popup-message").style.display = "block";
+            document.getElementById("contact-form").reset(); 
+        }).catch(error => console.error("Error:", error));
+    });
+
+    function closePopup() {
+        document.getElementById("popup-message").style.display = "none";
+    }
+</script>
+
+
 <style>
+
+#popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#popup-message button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    background: #6d7f92;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#popup-message button:hover {
+    background-color: #0056b3; 
+}
+
     .contact-form {
         max-width: 600px;
         margin: auto;
