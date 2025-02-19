@@ -1,0 +1,360 @@
+
+body {
+    background-color: #FFF9F2;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-content {
+    background-color: #fafafa;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* for contact page */
+.header-content-contact {
+    background-color: #fafafa;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+}
+/* contact page part */
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-item a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 5%;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        flex-direction: column;
+        width: 150px;
+        text-align: center;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu-item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+        .menu-icon {
+            display: block;
+        }
+}
+
+/* contact page part */
+.contact-header {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+.contact-description {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 50px; 
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* contact page part */
+
+.whatsi,
+.maili {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.whatsi i,
+.maili i {
+    padding-right: 8px;
+}
+
+.fa-hand {
+    font-size: 3rem;
+    color: orange;
+}
+
+#p1 {
+    text-align: center;
+    font-size: 2vw;
+    margin-bottom: 5px;
+}
+
+    .cse {
+    display: inline-block;
+    justify-content: center;
+    padding: 8px 15px;
+    margin: 10px auto;
+    max-width: 250px;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #F0F0F0;
+    border-radius: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 300px;
+    font-size: 1.2rem;
+    background-color: #F0F0F0;
+    border-radius: 80px;
+    white-space: nowrap;
+}
+
+.mail a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.icon-item i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.icon-item span {
+    display: block;
+    font-size: 16px;
+     color: black;
+}
+
+.fa-html5 {
+    color: orangered;
+}
+
+.fa-css3-alt {
+    color: rgb(73, 73, 246);
+}
+
+.fa-code {
+    color: black;
+}
+
+.fa-java {
+    color: skyblue;
+}
+
+.fa-js {
+    color: purple;
+}
+
+a {
+    text-decoration: none;
+}
+
+.github-icon,
+.linkedin-icon,
+.facebook-icon,
+.twitter-icon {
+    font-size: 5vw;
+    color: black;
+    margin: 0 15px;
+}
+
+.fa-rocket {
+    font-size: 2rem;
+    color: orangered;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    background-color: #fafafa;
+    font-size: 1rem;
+    padding: 1% 5%;
+}
+
+.footer-content {
+    font-size: 0.8rem;
+    stroke-width: bold;
+    text-align: center;
+    color: black;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* .footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 30px;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    background-color: #fafafa;
+    font-size: 1rem;
+    padding: 1% 5%;
+}
+.footer-content {
+    font-size: 0.8rem;
+    stroke-width: bold;
+    text-align: center;
+    color: black;
+} */
+
+/* popup message part */
+
+#popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#popup-message button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    background: #6d7f92;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#popup-message button:hover {
+    background-color: #0056b3; 
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group {
+flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Rounded corners */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    padding: 12px;
+}
+
+button {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    background-color: #6d7f92;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+/* popup message part */

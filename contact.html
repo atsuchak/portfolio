@@ -4,81 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Photos/image.ico">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/dbecc4d286.js" crossorigin="anonymous"></script>
-    <title>contact</title>
+    <title>Contact</title>
 </head>
-<body>
-
-    <style>
-        body {
-            background-color: #FFF9F2;
-            margin: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
-
     <header>
-        <div class="header-content">
+        <div class="header-content-contact">
             <div class="menu">
-                <span class="menu-item"><a href="index.html" style="color: black;">home</a></span>
-                <span class="menu-item"><a href="resume.html" style="color: black;">resume</a></span>
-                <span class="menu-item"><a href="project.html" style="color: black;">project</a></span>
-                <!-- <span class="menu-item"><a href="contact.html" style="color: black;">contact</a></span> -->
+                <span class="menu-item"><a href="index.html" class="nav-link">Home</a></span>
+                <span class="menu-item"><a href="resume.html" class="nav-link">Resume</a></span>
+                <span class="menu-item"><a href="project.html" class="nav-link">Project</a></span>
             </div>
             <div class="menu-icon">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-        <style>
-            .header-content {
-                background-color: #fafafa;
-                padding: 1% 5%;
-                display: flex;
-                justify-content:end;
-                align-items: center;
-                font-size: 1rem;
-                position: relative;
-            }
-            .menu {
-                display: flex;
-                gap: 15px;
-            }
-
-            .menu-icon {
-                display: none;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-
-
-            @media (max-width: 768px) {
-                .menu {
-                    display: none;
-                    position: absolute;
-                    top: 50px;
-                    right: 5%;
-                    background-color: #fff;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    border-radius: 5px;
-                    flex-direction: column;
-                    width: 150px;
-                    text-align: center;
-                }
-
-                .menu.active {
-                    display: flex;
-                }
-
-                .menu-item {
-                    padding: 10px;
-                    border-bottom: 1px solid #ddd;
-                }
-
-                .menu-icon {
-                    display: block;
-                }
-            }
-        </style>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -90,261 +30,124 @@
                 });
             });
         </script>
-
     </header>
 
-    <h1 style="text-align: center; margin: auto; margin-top: 5%; max-width: 90%; line-height: 1.5; font-size: 3rem;">
-        Get in touch
-    </h1>    
 
-    <p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
-        Feel free to reach out if you’d like to connect, collaborate, or
-discuss exciting opportunities!
-    </p>
+<body>
+    <h1 class="contact-header" style="margin-top: 1.5%;">Get in touch</h1>    
+
+    <p class="contact-description">Feel free to reach out if you’d like to connect, collaborate, or discuss exciting opportunities!</p>
 
     <div class="contact-container">
-        <!-- WhatsApp -->
         <div class="whatsapp-contain">
             <a href="https://wa.me/+8801301085365" class="whatsi">
-                <i class="fa-sharp fa-solid fa-envelope" style="padding-right: 8px;"></i>
-                +8801301085365
+                <i class="fa-sharp fa-solid fa-envelope"></i> +8801301085365
             </a>
         </div>
     
-        <!-- Email -->
         <div class="mail-contain">
             <a href="mailto:ahnaftajwarsuchak@gmail.com" class="maili">
-                <i class="fa-sharp fa-solid fa-envelope" style="padding-right: 8px;"></i>
-                ahnaftajwarsuchak@gmail.com
+                <i class="fa-sharp fa-solid fa-envelope"></i> ahnaftajwarsuchak@gmail.com
             </a>
         </div>
     </div>
-    
-    <style>
-        .contact-container {
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-            gap: 50px; 
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-    
-        .whatsi, .maili {
-            display: flex;
-            align-items: center;
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-    
-        .whatsi i, .maili i {
-            padding-right: 8px; 
-        }
-    </style>
 
-<br>
-
-<p style="text-align: center; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
-    <a href="https://github.com/atsuchak" target="_blank">
-        <i class="fa-brands fa-github github-icon"></i>
-    </a>
-    <a href="https://linkedin.com/in/atsuchak" target="_blank">
-        <i class="fa-brands fa-linkedin linkedin-icon"></i>
-    </a>
-    <a href="https://facebook.com/atsuchak" target="_blank">
-        <i class="fa-brands fa-facebook facebook-icon"></i>
-    </a>
-    <a href="https://x.com/atsuchak" target="_blank">
-        <i class="fa-brands fa-x-twitter twitter-icon"></i>
-    </a>
-
-    <style>
-        a {
-            text-decoration: none;
-        }
-
-        .github-icon,
-        .linkedin-icon,
-        .facebook-icon,
-        .twitter-icon {
-            font-size: 8vw;
-            color: black;
-            margin: 0 15px;
-        }
-
-        form.contact-form {
-            margin-top: 40px;
-        }
-    </style>
-
-<form id="contact-form" class="contact-form">
-    <div class="form-row">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="entry.1222639255" placeholder="Your Name" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="entry.2087220391" placeholder="Your Email" required>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="entry.88160229" placeholder="Your Message" required></textarea>
-    </div>
-
-    <button type="submit">Submit</button>
-    <!-- <p id="form-message" style="text-align: center; color: green; display: none;">Your message has been sent!</p> -->
-</form>
-
-<div id="popup-message">
-    <p>Your message has been submitted!</p>
-    <button onclick="closePopup()">OK</button>
-</div>
-
-
-<script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); 
-        
-        const formData = new FormData(this);
-        
-        fetch("https://docs.google.com/forms/d/e/1FAIpQLScJK08S-fYkzdcJnqR9CLUxBmdMut6NP5E1bwhTuNqAQrVOpg/formResponse", {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"  
-        }).then(() => {
-            // alert("Your nessage has been submitted!");
-            document.getElementById("popup-message").style.display = "block";
-            document.getElementById("contact-form").reset(); 
-        }).catch(error => console.error("Error:", error));
-    });
-
-    function closePopup() {
-        document.getElementById("popup-message").style.display = "none";
-    }
-</script>
-
-
-<style>
-
-#popup-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: none;
-    border-radius: 10px;
-    z-index: 1000;
-}
-
-#popup-message button {
-    margin-top: 10px;
-    padding: 5px 15px;
-    border: none;
-    background: #6d7f92;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#popup-message button:hover {
-    background-color: #0056b3; 
-}
-
-    .contact-form {
-        max-width: 600px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    .form-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .form-group {
-        flex: 1;
-        margin-bottom: 15px;
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 10px 20px;
-        border: 1px solid #ddd;
-        border-radius: 50px; /* Rounded corners */
-        font-size: 16px;
-        box-sizing: border-box;
-    }
-
-    textarea {
-        height: 150px;
-        resize: none;
-        padding: 12px;
-    }
-
-    button {
-        padding: 8px 20px;
-        border: 1px solid #333;
-        border-radius: 50px;
-        background-color: #6d7f92;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-        display: block;
-        margin: 10px auto;
+    <p
+      style="
         text-align: center;
-    }
+        margin: auto;
+        max-width: 90%;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      "
+    >
+      <a href="https://github.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-github github-icon"></i>
+      </a>
+      <a href="https://linkedin.com/in/atsuchak" target="_blank">
+        <i class="fa-brands fa-linkedin linkedin-icon"></i>
+      </a>
+      <a href="https://facebook.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-facebook facebook-icon"></i>
+      </a>
+      <a href="https://x.com/atsuchak" target="_blank">
+        <i class="fa-brands fa-x-twitter twitter-icon"></i>
+      </a>
+    </p>
 
-    button:hover {
-        background-color: #0056b3;
-    }
+    <form id="contact-form" class="contact-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="entry.1222639255" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="entry.2087220391" placeholder="Your Email" required>
+            </div>
+        </div>
 
-    input::placeholder, textarea::placeholder {
-        color: #aaa;
-    }
-</style>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="entry.88160229" placeholder="Your Message" required></textarea>
+        </div>
 
+        <button type="submit">Submit</button>
+    </form>
 
-<footer class="footer">
-    <div class="footer-content">
-        <span class="name">© 2025 Ahnaf Tajwar Suchak. All rights reserved</span>
+    <div id="popup-message">
+        <p>Your message has been submitted!</p>
+        <button onclick="closePopup()">OK</button>
     </div>
-    <style>
-        .footer{
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            height: 30px;
-            border-top: 1px solid black;
-            margin-top: 20px;
-            background-color: #fafafa;
-            font-size: 1rem;
-            padding: 1% 5%;
-        }
-        .footer-content {
-            font-size: 0.8rem;
-            stroke-width: bold;
-            text-align: center;
-            color: black;
-        }
-    </style>
-</footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            const formData = new FormData(this);
+            
+            fetch("https://docs.google.com/forms/d/e/1FAIpQLScJK08S-fYkzdcJnqR9CLUxBmdMut6NP5E1bwhTuNqAQrVOpg/formResponse", {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"  
+            }).then(() => {
+                // alert("Your nessage has been submitted!");
+                document.getElementById("popup-message").style.display = "block";
+                document.getElementById("contact-form").reset(); 
+            }).catch(error => console.error("Error:", error));
+        });
     
+        function closePopup() {
+            document.getElementById("popup-message").style.display = "none";
+        }
+    </script>
 </body>
 </html>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="name">© 2025 Ahnaf Tajwar Suchak. All rights reserved</span>
+        </div>
+        
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                const formData = new FormData(this);
+
+                fetch("https://docs.google.com/forms/d/e/1FAIpQLScJK08S-fYkzdcJnqR9CLUxBmdMut6NP5E1bwhTuNqAQrVOpg/formResponse", {
+                    method: "POST",
+                    body: formData,
+                    mode: "no-cors"
+                }).then(() => {
+                    document.getElementById("popup-message").style.display = "block";
+                    document.getElementById("contact-form").reset(); 
+                }).catch(error => console.error("Error:", error));
+            });
+
+            function closePopup() {
+                document.getElementById("popup-message").style.display = "none";
+            }
+        </script>
+    </footer>
+
