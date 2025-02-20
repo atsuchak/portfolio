@@ -4,8 +4,9 @@ function appendToDisplay(input) {
     if(input === 'M+'){
         display.value = "Currenlty working on it";
         display.style.fontSize = "2.5rem";
+    }else {
+        display.value += input;    
     }
-    display.value += input;    
 }
 
 function clearDisplay(input) {
