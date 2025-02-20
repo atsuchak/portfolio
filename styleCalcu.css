@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: beige;
+}
+
+#Calculator {
+    background-image: url(Photos/sakin.jpg);
+    background-position-x: center;
+    background-position-y: calc(50% + 1.2in);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: right;
+    border: none;
+    background-color: rgb(30, 30, 30);
+    color: whitesmoke;
+    box-sizing: border-box;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 80px;
+    height: 100px;
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.operator:hover {
+    background-color: hsl(0, 0%, 65%);
+}
+
+.operator:active {
+    background-color: hsl(0, 0%, 75%) !important;
+}
+
+.special {
+    background-color: blue;
+}
+
+.special:hover {
+    background-color: hsl(0, 0%, 45%);
+}
+
+.special:active {
+    background-color: hsl(0, 0%, 95%);
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 35%);
+}
+
+button:active{
+    background-color: hsl(0, 0%, 45%);
+}
