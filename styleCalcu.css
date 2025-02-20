@@ -8,9 +8,10 @@ body {
 }
 
 #Calculator {
+    background-repeat: no-repeat;
     background-image: url(Photos/sakin.jpg);
     background-position-x: center;
-    background-position-y: calc(50% + 1.2in);
+    background-position-y: calc(50% + .8in);
     background-size: cover;
     font-family: Arial, sans-serif;
     background-color: black;
@@ -21,8 +22,8 @@ body {
 
 #display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
+    padding: 5vw;
+    font-size: 5vw;
     text-align: right;
     border: none;
     background-color: rgb(30, 30, 30);
