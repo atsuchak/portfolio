@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: green !important;
+    background: url(Photos/snakeLogo.png);
+    min-height: 100vh;
+    background-size: 20rem 25rem;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /* display: flex; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.body {
+    background-color: green !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.body::after {
+    content: "";
+    background: url(Photos/snakeLogo.png);
+    background-size: 20rem 25rem;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20rem;
+    height: 25rem;
+    pointer-events: none;
+}
+
+#board {
+    background: linear-gradient(rgb(35, 75, 35), yellow);
+    width: 90vmin;
+    height: 95vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}

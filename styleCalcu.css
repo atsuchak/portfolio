@@ -39,8 +39,8 @@ body {
 }
 
 button {
-    width: 80px;
-    height: 100px;
+    width: 15vw;
+    height: 10vh;
     border-radius: 30px;
     border: 2px solid black;
     background-color: transparent;
@@ -81,5 +81,3 @@ button:hover {
 button:active{
     background-color: hsl(0, 0%, 45%);
 }
-
-
