@@ -19,6 +19,7 @@ body {
     justify-content: center; /* Center content vertically */
 }
 
+
 .header {
     text-align: center; /* Center the title */
     width: 100%;
@@ -64,12 +65,16 @@ body {
 
 #board {
     background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
-    width: 600px;
-    height: 600px;
+    width: 80vw;
+    height: 80vh;
+    max-width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
     border: 2px solid black;
     display: grid;
-    grid-template-rows: repeat(28, 1fr);
-    grid-template-columns: repeat(28, 1fr);
+    grid-template-rows: repeat(48, 1fr);
+    grid-template-columns: repeat(48, 1fr);
+    padding: 10px;
 }
 
 .head {
@@ -127,4 +132,110 @@ button {
 button:hover {
     background-color: #45a049;
 }
+/* Your existing media query for portrait mode (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust game board size */
+    #board {
+        width: 85vw;
+        height: 85vw;
+        max-width: 400px; /* Max size for small screens */
+        max-height: 400px;
+    }
 
+    /* Adjust the mobile controls positioning and size */
+    .mobile-controls {
+        bottom: 20px; /* Adjust control position to not overlap with the board */
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust buttons for mobile size */
+    button {
+        font-size: 20px;
+        padding: 12px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Adjust score container layout */
+    .scoreContainer {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    /* Make the reset button responsive */
+    #resetHighScore {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+}
+
+
+/* New media query for landscape mode (max-width: 768px and landscape orientation) */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Ensure board fully covers the width in landscape mode */
+    #board {
+        width: 90vw; /* Set board to take up 90% of the screen width */
+        height: 45vw; /* Set height relative to the width to maintain aspect ratio */
+        max-width: 600px; /* Max size for small screens */
+        max-height: 400px; /* Limit height to maintain balance */
+        margin-left: 5vw; /* Keep some space on the left */
+        margin-right: 5vw; /* Add space on the right */
+    }
+
+    /* Adjust mobile controls for landscape */
+    .mobile-controls {
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust buttons for landscape */
+    button {
+        font-size: 22px;
+        padding: 14px;
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Adjust score container layout */
+    .scoreContainer {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-top: 25px;
+    }
+
+    /* Adjust reset button for landscape */
+    #resetHighScore {
+        font-size: 22px;
+        padding: 12px 18px;
+    }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+    #board {
+        width: 90vw; 
+        height: 90vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .scoreContainer {
+        font-size: 14px;
+        margin-left: 5px;
+        margin-top: 15px;
+        margin-left: 5vw;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px;
+        width: 45px;
+        height: 45px;
+    }
+}
