@@ -116,3 +116,24 @@ document.getElementById("resetHighScore").addEventListener("click", () => {
     alert("🔥 High Score Reset! 🔥");
 });
 
+// Mobile control buttons
+document.getElementById('upBtn').addEventListener('click', () => {
+    inputDir = { x: 0, y: -1 };  // Up movement
+    moveSound.play();  // Play move sound
+});
+
+document.getElementById('downBtn').addEventListener('click', () => {
+    inputDir = { x: 0, y: 1 };  // Down movement
+    moveSound.play();  // Play move sound
+});
+
+document.getElementById('leftBtn').addEventListener('click', () => {
+    inputDir = { x: -1, y: 0 };  // Left movement
+    moveSound.play();  // Play move sound
+});
+
+document.getElementById('rightBtn').addEventListener('click', () => {
+    inputDir = { x: 1, y: 0 };  // Right movement
+    moveSound.play();  // Play move sound
+});
+

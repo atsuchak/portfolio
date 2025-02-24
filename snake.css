@@ -54,6 +54,12 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin: 10px;
+    padding: 10px 20px;  
+    box-sizing: border-box;  /* Include border and padding in the element's total width and height */
+    text-align: center; 
+    white-space: nowrap;  /* Prevents text from breaking into multiple lines */
+    width: auto;  /* Let the button width adjust to the content */
+    display: inline-block; 
 }
 
 #board {
@@ -87,3 +93,38 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.mobile-controls {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mobile-controls div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    font-size: 24px;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    margin-right: 80px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    /* color: white; */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
