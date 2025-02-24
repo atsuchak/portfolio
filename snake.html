@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
     <link rel="stylesheet" href="snake.css">
-    <title>Snake game</title>
 </head>
 <body>
-
-    <div class="body">
-        <div id="board"></div>
+    <div class="header">
+        <h1>Snake Game</h1>
     </div>
+    <div class="gameContainer">
+        <div id="board"></div>
+        <div class="scoreContainer">
+            <div id="scoreBox">Score: 0</div>
+            <div id="hiscoreBox">HiScore: 0</div>
+            <button id="resetHighScore">Reset High Score</button>
+        </div>
+    </div>
+    <script src="snake.js"></script>
 </body>
-<script src="snake.js"></script>
 </html>
