@@ -147,7 +147,7 @@ button:hover {
     .scoreContainer {
         font-size: 16px;
         margin-left: 10px;
-        margin-top: 20px;
+        margin-top: -20px;
         position: absolute;
         top: 10px;
         left: 10px;
@@ -157,6 +157,8 @@ button:hover {
         bottom: 20px;
     }
     button {
+        background: none;
+        border: 2px solid;
         font-size: 24px;
         padding: 15px;
         width: 60px;
@@ -165,17 +167,35 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .scoreContainer {
+        width: 50vw;
+        height: 1vh;
+        font-size: 20px;
+        margin-left: 3vw;
+        margin-top: -5vw;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
     #board {
+        /* margin-bottom: 160px; */
+        margin-bottom: 30vw;
         width: 90vw;
         height: 90vw;
         max-width: 300px;
         max-height: 300px;
     }
     button {
-        font-size: 20px;
-        padding: 12px;
-        width: 55px;
-        height: 55px;
+        background: none;
+        border: 2px solid;
+        /* font-size: 40px; */
+        /* padding: 15px; */
+        /* width: 70px; */
+        /* height: 70px; */
+        font-size: 10vw;
+        /* padding: 1vw; */
+        width: 20vw;
+        height: 20vw;
     }
     .mobile-controls div {
         gap: 80px;
