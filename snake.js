@@ -116,7 +116,7 @@ document.getElementById("resetHighScore").addEventListener("click", () => {
     hiscoreval = 0; // Reset high score in memory
     localStorage.setItem("hiscore", hiscoreval); // Save new high score as 0
     document.getElementById("hiscoreBox").innerHTML = "HiScore: " + hiscoreval;
-    alert("🔥 High Score Reset! 🔥");
+    // alert("🔥 High Score Reset! 🔥");
 });
 
 // Mobile control buttons
