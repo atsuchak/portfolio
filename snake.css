@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
 * {
     margin: 0;
@@ -12,33 +12,33 @@ body {
     background-position: bottom right;
     background-color: rgb(130, 130, 100);
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column; 
+    align-items: center;
     height: 100vh;
     font-family: 'New Tegomin', serif;
-    justify-content: center; /* Center content vertically */
+    justify-content: center; 
 }
 
 
 .header {
-    text-align: center; /* Center the title */
+    text-align: center; 
     width: 100%;
-    margin-bottom: 20px; /* Space between title and game board */
+    margin-bottom: 20px; 
 }
 
 .gameContainer {
     display: flex;
-    flex-direction: row; /* Align game content (board and score) horizontally */
-    align-items: center; /* Center the content vertically */
+    flex-direction: row; 
+    align-items: center; 
 }
 
 .scoreContainer {
     display: flex;
-    flex-direction: column; /* Stack score and button vertically */
-    align-items: flex-start; /* Align score and button to the left inside the container */
-    margin-left: 20px; /* Add space between score container and game board */
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-left: 20px; 
     font-size: 20px;
-    margin-top: -480px; /* Move the score, high score, and reset button up */
+    margin-top: -480px; 
 }
 
 #scoreBox, #hiscoreBox {
@@ -56,10 +56,10 @@ body {
     font-weight: bold;
     margin: 10px;
     padding: 10px 20px;  
-    box-sizing: border-box;  /* Include border and padding in the element's total width and height */
+    box-sizing: border-box;  
     text-align: center; 
-    white-space: nowrap;  /* Prevents text from breaking into multiple lines */
-    width: auto;  /* Let the button width adjust to the content */
+    white-space: nowrap;  
+    width: auto; 
     display: inline-block; 
 }
 
@@ -125,33 +125,31 @@ button {
     background-color: #4CAF50;
     border: none;
     border-radius: 50%;
-    /* color: white; */
+    /* color: white; 
     cursor: pointer;
 }
 
 button:hover {
     background-color: #45a049;
 }
-/* Your existing media query for portrait mode (max-width: 768px) */
+
 @media (max-width: 768px) {
-    /* Adjust game board size */
+    
     #board {
         width: 85vw;
         height: 85vw;
-        max-width: 400px; /* Max size for small screens */
+        max-width: 400px; 
         max-height: 400px;
     }
 
-    /* Adjust the mobile controls positioning and size */
     .mobile-controls {
-        bottom: 20px; /* Adjust control position to not overlap with the board */
+        bottom: 20px; 
         right: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Adjust buttons for mobile size */
     button {
         font-size: 20px;
         padding: 12px;
@@ -159,14 +157,12 @@ button:hover {
         height: 50px;
     }
 
-    /* Adjust score container layout */
     .scoreContainer {
         font-size: 16px;
         margin-left: 10px;
         margin-top: 20px;
     }
 
-    /* Make the reset button responsive */
     #resetHighScore {
         font-size: 20px;
         padding: 10px 15px;
@@ -174,19 +170,16 @@ button:hover {
 }
 
 
-/* New media query for landscape mode (max-width: 768px and landscape orientation) */
 @media (max-width: 768px) and (orientation: landscape) {
-    /* Ensure board fully covers the width in landscape mode */
     #board {
-        width: 90vw; /* Set board to take up 90% of the screen width */
-        height: 45vw; /* Set height relative to the width to maintain aspect ratio */
-        max-width: 600px; /* Max size for small screens */
-        max-height: 400px; /* Limit height to maintain balance */
-        margin-left: 5vw; /* Keep some space on the left */
-        margin-right: 5vw; /* Add space on the right */
+        width: 90vw; 
+        height: 45vw; 
+        max-width: 600px; 
+        max-height: 400px; 
+        margin-left: 5vw; 
+        margin-right: 5vw; 
     }
 
-    /* Adjust mobile controls for landscape */
     .mobile-controls {
         bottom: 20px;
         right: 20px;
@@ -195,7 +188,6 @@ button:hover {
         align-items: center;
     }
 
-    /* Adjust buttons for landscape */
     button {
         font-size: 22px;
         padding: 14px;
@@ -203,21 +195,18 @@ button:hover {
         height: 55px;
     }
 
-    /* Adjust score container layout */
     .scoreContainer {
         font-size: 18px;
         margin-left: 10px;
         margin-top: 25px;
     }
 
-    /* Adjust reset button for landscape */
     #resetHighScore {
         font-size: 22px;
         padding: 12px 18px;
     }
 }
 
-/* For smaller mobile devices */
 @media (max-width: 480px) {
     #board {
         width: 90vw; 
@@ -238,4 +227,418 @@ button:hover {
         width: 45px;
         height: 45px;
     }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background: url(Photos/snakeLogo.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: rgb(130, 130, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'New Tegomin', serif;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: -480px;
+}
+
+#scoreBox, #hiscoreBox {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#resetHighScore {
+    font-family: 'New Tegomin', serif;
+    background: none;
+    border: 3px solid;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    display: inline-block;
+}
+
+#board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 80vw;
+    height: 80vh;
+    max-width: 700px;
+    max-height: 700px;
+    margin: 0 auto;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(48, 1fr);
+    grid-template-columns: repeat(48, 1fr);
+    padding: 10px;
+}
+
+.head {
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.snake {
+    background-color: purple;
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-controls {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-controls div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+button {
+    font-size: 28px;
+    padding: 18px;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: rgb(130, 130, 100);
+    }
+    .header {
+        display: none;
+    }
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .scoreContainer {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 20px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .mobile-controls {
+        display: flex;
+        bottom: 20px;
+    }
+    button {
+        font-size: 24px;
+        padding: 15px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    button {
+        font-size: 20px;
+        padding: 12px;
+        width: 55px;
+        height: 55px;
+    }
+    .mobile-controls div {
+        gap: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(Photos/snakeLogo.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: rgb(130, 130, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'New Tegomin', serif;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: -480px;
+}
+
+#scoreBox, #hiscoreBox {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#resetHighScore {
+    font-family: 'New Tegomin', serif;
+    background: none;
+    border: 3px solid;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+}
+
+#board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 80vw;
+    height: 80vw;
+    max-width: 700px;
+    max-height: 700px;
+    margin: 0 auto;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(48, 1fr);
+    grid-template-columns: repeat(48, 1fr);
+    padding: 10px;
+}
+
+.head {
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid black;
+}
+
+.snake {
+    background-color: purple;
+    border: 1px solid white;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.mobile-controls {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: rgb(130, 130, 100); 
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .header {
+        display: none; 
+    }
+    
+    .gameContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .scoreContainer {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 16px;
+    }
+
+    #resetHighScore {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .mobile-controls {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-controls div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+} */
