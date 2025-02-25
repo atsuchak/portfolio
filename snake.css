@@ -152,6 +152,10 @@ button:hover {
         top: 10px;
         left: 10px;
     }
+    button:hover {
+        background-color: none;
+        background: none;
+    }
     .mobile-controls {
         display: flex;
         bottom: 20px;
@@ -184,6 +188,10 @@ button:hover {
         height: 90vw;
         max-width: 300px;
         max-height: 300px;
+    }
+    button:hover {
+        background-color: none;
+        background: none;
     }
     button {
         background: none;
