@@ -73,6 +73,31 @@
         }
     </style>
 </head>
+
+<header>
+    <div class="header-content-contact">
+        <div class="menu">
+            <span class="menu-item"><a href="index.html" class="nav-link">Home</a></span>
+            <span class="menu-item"><a href="resume.html" class="nav-link">Resume</a></span>
+            <span class="menu-item"><a href="contact.html" class="nav-link">Contact</a></span>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const menu = document.querySelector(".menu");
+        
+            menuIcon.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</header>
+
 <body class="bg-gray-100 p-10">
     <div class="container">
         <!-- Project Card 1 -->
