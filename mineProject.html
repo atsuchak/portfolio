@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Photos/image.ico" />
+    <script src="https://kit.fontawesome.com/dbecc4d286.js" crossorigin="anonymous"></script>
+    <title>Calculator Project</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .project-card {
+            margin: 0 50px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .project-image-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            height: 200px;  
+            overflow: hidden; 
+            position: relative;
+        }
+        .project-image {
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            max-height: 400px;
+            object-fit: cover;  /* Ensures image covers the area without stretching */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .project-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .project-description {
+            color: #555;
+            margin-top: 10px;
+        }
+        .view-details-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: auto;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .view-details-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content-contact">
+        <div class="menu">
+            <span class="menu-item"><a href="index.html" class="nav-link">Home</a></span>
+            <span class="menu-item"><a href="resume.html" class="nav-link">Resume</a></span>
+            <span class="menu-item"><a href="project.html" style="color: black">project</a></span>
+            <span class="menu-item"><a href="contact.html" class="nav-link">Contact</a></span>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const menu = document.querySelector(".menu");
+        
+            menuIcon.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</header>
+
+<div class="project-card">
+    <div class="project-image-container">
+        <img src="Photos/minewiper.jpg" alt="Miensweeper Logo" class="project-image">
+    </div>
+    <div class="project-details">
+        <h3 class="project-title">Minesweeper: A Classic Puzzle Game</h3>
+        <p class="project-description">The Minesweeper project is a logical puzzle game where...</p>
+    </div>
+    <button onclick="window.location.href='mineGame.html'" class="view-details-btn">
+        Play
+    </button>
+</div>
+<br><br><br>
+    <h1 style="text-align: center; margin: auto; max-width: 90%; line-height: 1.5">
+    About
+  </h1><br>
+  <p style=" text-align: start; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+    
+    The Minesweeper project is a logical puzzle game where players uncover a grid while avoiding hidden mines. Designed with an intuitive UI, it challenges users to strategize and think critically while uncovering safe tiles.
+
+Ideal for puzzle lovers, this project showcases event handling and algorithmic problem-solving in game development.
+</p><br>
+<p style=" text-align: start; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+    <b>Features: </b> <br> ✅ Grid-based gameplay <br> ✅ Mine detection and number hints
+    <br> ✅ Right-click flagging for potential mines
+    <br> ✅ Responsive and interactive interface  <br> <br>This project is an excellent learning experience for implementing recursion, grid-based logic, and dynamic UI updates. 🚀
+</p><br>
+    
+<br><br><br>
+<h1 style="text-align: center; margin: auto; max-width: 90%; line-height: 1.5">
+Source Code
+</h1><br>
+<p style=" text-align: start; margin: auto; max-width: 90%; font-size: 1.1rem; line-height: 1.5;">
+    <b> </b>
+    You can check the source code the click on Source Code    
+</p><br>
+
+<div style="text-align: center">
+    <span class="resume"><a href="notavailable.html" style="color: rgb(63, 148, 252);">Source Code</a></span>
+</div>
+
+
+</body>
+</html>
+
+<footer class="footer">
+    <div class="footer-content">
+        <span class="name">© 2025 Ahnaf Tajwar Suchak. All rights reserved</span>
+    </div>
+</footer>

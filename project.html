@@ -6,58 +6,144 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Photos/image.ico" />
     <script src="https://kit.fontawesome.com/dbecc4d286.js" crossorigin="anonymous"></script>
-    <title>Project</title>
+    <title>Projects</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .project-image-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            height: 200px;  
+            overflow: hidden; 
+            position: relative;
+        }
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* Ensures image covers the area without stretching */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .project-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .project-description {
+            color: #555;
+            margin-top: 10px;
+        }
+        .view-details-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: auto;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .view-details-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body>
-
-<header>
-    <div class="header-content-contact">
-        <div class="menu">
-            <span class="menu-item"><a href="index.html" class="nav-link">Home</a></span>
-            <span class="menu-item"><a href="resume.html" class="nav-link">Resume</a></span>
-            <span class="menu-item"><a href="contact.html" class="nav-link">Contact</a></span>
+<body class="bg-gray-100 p-10">
+    <div class="container">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="Photos/calcu.png" alt="Calculator Logo" class="project-image">
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">Calculator: A Simple and Efficient Arithmetic Tool</h3>
+                <p class="project-description">The Calculator project is a efficient tool designed to...</p>
+            </div>
+            <button onclick="window.location.href='calculatorProject.html'" class="view-details-btn">
+                View Details
+            </button>
         </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuIcon = document.querySelector(".menu-icon");
-            const menu = document.querySelector(".menu");
+        <!-- Project Card 2 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="Photos/tic.jpg" alt="Tic Tac Toe Logo" class="project-image">
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">Tic-Tac-Toe: A Fun and Interactive Strategy Game</h3>
+                <p class="project-description">The Tic-Tac-Toe project is a simple yet engaging...</p>
+            </div>
+            <button onclick="window.location.href='tictactoeProject.html'" class="view-details-btn">
+                View Details
+            </button>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="Photos/snakeLogo.png" alt="Snake Logo" class="project-image">
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">Snake Game: A Classic Arcade Challenge</h3>
+                <p class="project-description">The Snake Game project is a modern take on the...</p>
+            </div>
+            <button onclick="window.location.href='snakeProject.html'" class="view-details-btn">
+                View Details
+            </button>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="Photos/minewiper.jpg" alt="Miensweeper Logo" class="project-image">
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">Minesweeper: A Classic Puzzle Game</h3>
+                <p class="project-description">The Minesweeper project is a logical puzzle game where...</p>
+            </div>
+            <button onclick="window.location.href='mineProject.html'" class="view-details-btn">
+                View Details
+            </button>
+        </div>
         
-            menuIcon.addEventListener("click", function () {
-                menu.classList.toggle("active");
-            });
-        });
-    </script>
-</header>
-
-    <div style="text-align: center">
-        <span class="resume"><a href="calculator.html" style="color: rgb(63, 148, 252);">Calculator</a></span>
-    </div>
-
-    <div style="text-align: center">
-        <span class="resume"><a href="tictactoe.html" style="color: rgb(63, 148, 252);">TicTacToe</a></span>
-    </div>
-
-    <div style="text-align: center">
-        <span class="resume"><a href="snake.html" style="color: rgb(63, 148, 252);">Snake Game</a></span>
-    </div>
-
-    <div style="text-align: center">
-        <span class="resume"><a href="mineGame.html" style="color: rgb(63, 148, 252);">Minesweeper</a></span>
-    </div>
-
-    <div style="text-align: center">
-        <span class="resume"><a href="facebook.html" style="color: rgb(63, 148, 252);">Facebook</a></span>
+        <!-- Project Card 5 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="Photos/face.png" alt="Facebook Logo" class="project-image">
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">Facebook Login Clone: A Realistic Login Page for Learning</h3>
+                <p class="project-description">The Facebook Login Clone is a replica of...</p>
+            </div>
+            <button onclick="window.location.href='facebookProject.html'" class="view-details-btn">
+                View Details
+            </button>
+        </div>
     </div>
 </body>
 </html>
-
-<footer class="footer">
-    <div class="footer-content">
-        <span class="name">© 2025 Ahnaf Tajwar Suchak. All rights reserved</span>
-    </div>
-</footer>
