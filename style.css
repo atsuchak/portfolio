@@ -44,31 +44,33 @@ body {
 }
 
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 5%;
-        background-color: #fff;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        flex-direction: column;
-        width: 150px;
-        text-align: center;
-    }
-    
-    .menu.active {
-        display: flex;
-    }
-    
-    .menu-item {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-    
-        .menu-icon {
-            display: block;
+
+        .menu {
+            position: absolute; 
+            top: 50px; 
+            right: 5%;
+            width: 150px; 
+            background-color: white;
+            display: none; 
+            z-index: 10; 
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            flex-direction: column;
         }
+        
+        .menu.active {
+            display: flex;
+        }
+        
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+            .menu-icon {
+                display: block;
+            }
+    
 }
 
 /* contact page part */

@@ -8,6 +8,33 @@
     <script src="https://kit.fontawesome.com/dbecc4d286.js" crossorigin="anonymous"></script>
     <title>Calculator Project</title>
     <style>
+         @media (max-width: 768px) {
+    .menu {
+        position: absolute; 
+        top: 50px; 
+        right: 5%;
+        width: 150px; 
+        background-color: white;
+        display: none; 
+        z-index: 10; 
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        flex-direction: column;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu-item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+        .menu-icon {
+            display: block;
+        }
+}
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
