@@ -230,9 +230,20 @@ a {
 .linkedin-icon,
 .facebook-icon,
 .twitter-icon {
-    font-size: 5vw;
+    font-size: 4rem;
     color: black;
     margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .github-icon,
+    .linkedin-icon,
+    .facebook-icon,
+    .twitter-icon {
+        font-size: 12vw;
+        color: black;
+        margin: 0 15px;
+    }
 }
 
 .fa-rocket {
