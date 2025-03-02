@@ -54,11 +54,11 @@
 
         .player {
             position: absolute;
-            bottom: 50px;
+            bottom: 95px;
             left: 50px;
             width: 20px; /* Increased width */
             height: 90px; 
-            background-color: white;
+            background-color: red;
         }
 
         .jump {
@@ -77,8 +77,8 @@
 
         @keyframes jump {
             0% { bottom: 10px; }
-            40% { bottom: 100px; }
-            60% { bottom: 100px; }
+            40% { bottom: 200px; }
+            60% { bottom: 200px; }
             100% { bottom: 10px; }
         }
 
@@ -87,6 +87,7 @@
             width: 20px;
             height: 30px;
             background-color: black;
+            bottom: 95px;
         }
 
         .obstacle-top {
@@ -95,6 +96,7 @@
             width: 20px;
             height: 30px;
             background-color: black;
+            top: 0;
         }
 
         .obstacle-bottom {
@@ -102,6 +104,7 @@
             bottom: -30px;
             width: 20px;
             height: 30px;
+            bottom: 0;
             background-color: black;
         }
     </style>
@@ -173,45 +176,51 @@
         }
 
         function spawnObstacle() {
-            if (!gameStarted) return;
+    if (!gameStarted) return;
 
-            let gameContainer = document.querySelector(".game-container");
+    let gameContainer = document.querySelector(".game-container");
 
-            // Randomly choose top or bottom for obstacle spawn
-            let obstacleType = Math.random() > 0.5 ? "top" : "bottom";
-            let obstacle = document.createElement("div");
-            obstacle.classList.add(obstacleType === "top" ? "obstacle-top" : "obstacle-bottom");
+    // Create obstacle and assign base class
+    let obstacle = document.createElement("div");
+    obstacle.classList.add("obstacle");
 
-            gameContainer.appendChild(obstacle);
+    // Randomize the height placement
+    let randomHeight = Math.random() * 90 + 80; // Adjusts height from 150px to 250px
+    obstacle.style.bottom = `${randomHeight}px`;
 
-            obstacle.style.left = '100%'; // Start position from the right side
+    gameContainer.appendChild(obstacle);
 
-            let moveInterval = setInterval(() => {
-                let obstaclePos = parseInt(obstacle.style.left.replace("px", ""));
-                if (obstaclePos <= -30) {
-                    clearInterval(moveInterval);
-                    obstacle.remove();
-                    setTimeout(spawnObstacle, Math.floor(Math.random() * 1500) + 1000); // Spawn new obstacle after random time
-                } else {
-                    obstacle.style.left = `${obstaclePos - 5}px`;
-                }
+    // Set initial position
+    obstacle.style.left = window.innerWidth + "px"; // Ensure it's off-screen before moving
 
-                let player = document.getElementById("player");
-                let playerRect = player.getBoundingClientRect();
-                let obstacleRect = obstacle.getBoundingClientRect();
-
-                if (
-                    playerRect.left < obstacleRect.right &&
-                    playerRect.right > obstacleRect.left &&
-                    playerRect.bottom > obstacleRect.top &&
-                    playerRect.top < obstacleRect.bottom
-                ) {
-                    clearInterval(scoreInterval);
-                    alert("Game Over! Your Score: " + score);
-                    resetGame();
-                }
-            }, 20);
+    let moveInterval = setInterval(() => {
+        let obstaclePos = parseInt(obstacle.style.left.replace("px", ""));
+        
+        if (obstaclePos <= -30) {
+            clearInterval(moveInterval);
+            obstacle.remove();
+            setTimeout(spawnObstacle, Math.floor(Math.random() * 1500) + 1000); // Random spawn delay
+        } else {
+            obstacle.style.left = `${obstaclePos - 5}px`;
         }
+
+        // Collision detection
+        let player = document.getElementById("player");
+        let playerRect = player.getBoundingClientRect();
+        let obstacleRect = obstacle.getBoundingClientRect();
+
+        if (
+            playerRect.left < obstacleRect.right &&
+            playerRect.right > obstacleRect.left &&
+            playerRect.bottom > obstacleRect.top &&
+            playerRect.top < obstacleRect.bottom
+        ) {
+            clearInterval(scoreInterval);
+            alert("Game Over! Your Score: " + score);
+            resetGame();
+        }
+    }, 20);
+}
 
         function resetGame() {
             gameStarted = false;

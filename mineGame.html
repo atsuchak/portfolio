@@ -74,6 +74,21 @@
             max-width: 100%;
             margin-top: 20px; /* Push the button downward */
         }
+        .mobile-message {
+            display: none;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            right: -100px;
+            padding: 5px 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            word-wrap: break-word;
+            max-width: 90vw;
+        }
         @media (max-width: 600px) {
             .board {
                 width: 375px; /* Smaller board for mobile */
@@ -85,7 +100,11 @@
             button {
                 width: 150px;
             }
+            .mobile-message {
+                display: block; /* Show on mobile screens */
+            }
         }
+        
     </style>
 </head>
 <body>
@@ -93,6 +112,9 @@
     <div class="game-container">
         <div class="board" id="board"></div>
         <button onclick="startGame()">Restart</button>
+    </div>
+    <div class="mobile-message">
+        Use desktop mode <br> for better experience
     </div>
     
     <script>
