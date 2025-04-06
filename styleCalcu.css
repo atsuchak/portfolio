@@ -9,12 +9,12 @@ body {
 
 #Calculator {
     background-repeat: no-repeat;
-    background-image: url(Photos/sakin.jpg);
+    /* background-image: url(Photos/sakin.jpg); */
     background-position-x: center;
     background-position-y: calc(50% + .8in);
     background-size: cover;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: rgb(160, 158, 158);
     border-radius: 15px;
     max-width: 500px;
     overflow: hidden;
@@ -26,8 +26,9 @@ body {
     font-size: 2rem;
     text-align: right;
     border: none;
-    background-color: rgb(30, 30, 30);
-    color: whitesmoke;
+    background-color: rgb(180, 180, 250);
+    color: wheat;
+    font-weight: bold;
     box-sizing: border-box;
 }
 
@@ -38,46 +39,42 @@ body {
     padding: 25px;
 }
 
+
 button {
     width: 80px;
     height: 10vh;
     border-radius: 30px;
     border: 2px solid black;
-    background-color: transparent;
+    background-color: rgb(180, 180, 250);
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
 }
 
 .operator {
-    background-color: orange;
+    background-color: rgb(230, 200, 200);
+    color: black;
 }
 
 .operator:hover {
-    background-color: hsl(0, 0%, 65%);
+    background-color: rgb(250, 220, 220);
 }
 
 .operator:active {
-    background-color: hsl(0, 0%, 75%) !important;
+    background-color: rgb(260, 230, 220) !important;
 }
 
 .special {
     background-color: blue;
 }
 
-.special:hover {
-    background-color: hsl(0, 0%, 45%);
-}
-
-.special:active {
-    background-color: hsl(0, 0%, 95%);
-}
 
 button:hover {
-    background-color: hsl(0, 0%, 35%);
+    background-color: rgb(190, 190, 300);
 }
 
 button:active{
-    background-color: hsl(0, 0%, 45%);
+    background-color: rgb(200, 200, 300);
 }
+
